@@ -1,0 +1,19 @@
+body {
+  background: #f7f7f7;
+  margin: 0;
+  padding: 0; }
+
+.container {
+  width: 92%;
+  max-width: 720px;
+  positon: relative;
+  margin: 0 auto; }
+
+header {
+  height: 75px;
+  background: #2c21fc;
+  margin-bottom: 20px;
+  line-height: 50px;
+  overflow: hidden;
+  color: #FFF;
+  }
