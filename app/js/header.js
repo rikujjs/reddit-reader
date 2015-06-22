@@ -4,7 +4,7 @@ var Header = React.createClass({
   render: function () {
     return <header>
       <div className="container">
-        <h1>TITLE</h1>
+        <h1>READER!</h1>
       </div>
     </header>
   }
