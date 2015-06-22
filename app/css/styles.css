@@ -12,6 +12,12 @@ body {
   margin: 0 auto;
 }
 
+.search {
+  position: absolute;
+  right: 30px;
+  top: 40px;
+}
+
 header {
   height: 75px;
   background: #2c21fc;
