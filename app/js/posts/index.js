@@ -1,9 +1,8 @@
 var React = require('react')
-    , Item = require('./item');
+    , Item = require('./item')
+    , $ = require('jquery');
 
-var POSTS = [{id: 1, title: 'Title jee', message: 'asdasdasd ME', author: 'Ridge'},
-            {id: 2, title: 'FAKE jee', message: 'MESSAGE ME', author: 'Chuck'},
-            {id: 3, title: 'YOYO jee', message: 'asdasdasd ME', author: 'Ridge'}]
+var url = 'http://www.reddit.com/r/androiddev/new.json?sort=hot';
 
 var List = React.createClass({
   getInitialState: function () {
@@ -13,15 +12,20 @@ var List = React.createClass({
     this.fetchLatestNews();
   },
   fetchLatestNews: function () {
-    //MOCK POSTS
-    this.setState({posts: POSTS});
+    var self = this;
+
+    $.getJSON(url, function(posts) {
+      self.setState({posts: posts.data.children});
+    });
   },
   render: function () {
-    return <ol className="posts">
-      {this.state.posts.map(function (post) {
-          return <Item key={post.id} post={post}/>
-      })}
-    </ol>;
+    return (
+      <ol className="posts">
+        {this.state.posts.map(function (post) {
+            return <Item key={post.data.id} post={post.data}/>
+        })}
+      </ol>
+    )
   }
 });
 

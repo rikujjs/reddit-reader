@@ -7,7 +7,7 @@ var Item = React.createClass({
     return (
       <li className="postContainer">
         <h4>{post.title}</h4>
-        <p>{post.message}</p>
+        <p>{post.selftext}</p>
         <Footer post={post}/>
       </li>
     )
