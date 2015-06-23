@@ -15,7 +15,9 @@ body {
 .search {
   position: absolute;
   right: 30px;
-  top: 40px;
+  top: 25px;
+  border-radius: 10px;
+  height: 25px;
 }
 
 header {
