@@ -13,11 +13,9 @@ body {
 }
 
 .search {
-  position: absolute;
-  right: 30px;
-  top: 25px;
   border-radius: 10px;
   height: 25px;
+  width: 65%;
 }
 
 header {

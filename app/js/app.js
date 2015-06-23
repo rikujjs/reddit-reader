@@ -1,6 +1,8 @@
 var React = window.React = require('react')
     , Header = require('./header')
-    , Posts = require('./posts');
+    , Posts = require('./posts')
+    , SearchBar = require('./search-bar');
+
 
 var App = React.createClass({
   render: function () {
@@ -8,6 +10,7 @@ var App = React.createClass({
       <div>
         <Header/>
         <div className="container content">
+          <SearchBar/>
           <Posts/>
         </div>
       </div>
