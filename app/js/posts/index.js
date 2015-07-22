@@ -1,3 +1,6 @@
+// This file is not re-writen in ES6 classes because it will be replaced
+// soon with a flux implementation.
+
 var React = require('react')
     , Item = require('./item')
     , $ = require('jquery');

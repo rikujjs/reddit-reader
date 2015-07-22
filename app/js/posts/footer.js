@@ -1,11 +1,11 @@
-var React = require('react');
+import React from 'react';
 
-var Footer = React.createClass({
-  render: function () {
+class Footer extends React.Component {
+  render() {
     return (
       <small>{this.props.post.author}</small>
     )
   }
-});
+};
 
-module.exports = Footer;
+export default Footer;

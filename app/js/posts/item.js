@@ -1,8 +1,8 @@
-var React = require('react')
-    , Footer = require('./footer');
+import React from 'react';
+import Footer from './footer';
 
-var Item = React.createClass({
-  render: function () {
+class Item extends React.Component{
+  render() {
     var post = this.props.post;
     return (
       <li className="postContainer">
@@ -12,6 +12,6 @@ var Item = React.createClass({
       </li>
     )
   }
-});
+};
 
-module.exports = Item;
+export default Item;

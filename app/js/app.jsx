@@ -1,9 +1,9 @@
-var React = window.React = require('react')
-    , Header = require('./header')
-    , Posts = require('./posts');
+import React from 'react';
+import Header from './header';
+import Posts from './posts';
 
-var App = React.createClass({
-  render: function () {
+let App = React.createClass({
+  render() {
     return (
       <div>
         <Header/>
@@ -15,8 +15,4 @@ var App = React.createClass({
   }
 });
 
-App.start = function () {
-    React.render(<App/>, document.getElementById('app'));
-};
-
-module.exports = window.App = App;
+React.render(<App/>, document.getElementById('app'));
