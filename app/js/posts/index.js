@@ -7,7 +7,7 @@ var React = require('react')
     , Item = require('./item')
     , $ = require('jquery');
 
-var url = 'http://www.reddit.com/r/androiddev/new.json?sort=hot';
+var url = 'http://www.reddit.com/r/reactjs/new.json?sort=hot';
 
 var List = React.createClass({
   getInitialState: function () {
