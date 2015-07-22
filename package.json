@@ -9,6 +9,7 @@
     "gulp": "~3.9.0",
     "gulp-browserify": "~0.5.1",
     "gulp-concat": "~2.5.2",
+    "gulp-rename": "^1.2.2",
     "react": "^0.13.3"
   },
   "dependencies": {

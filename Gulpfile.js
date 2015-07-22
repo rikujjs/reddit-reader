@@ -1,6 +1,7 @@
 var gulp = require('gulp')
   , browserify = require('gulp-browserify')
-  , concat = require('gulp-concat');
+  , concat = require('gulp-concat')
+  , rename = require('gulp-rename');
 
 gulp.task('styles', function () {
     gulp.src(['app/css/styles.css'])
@@ -14,6 +15,7 @@ gulp.task('scripts', function () {
             debug: true,
             transform: [ 'babelify' ]
         }))
+        .pipe(rename('app.js'))
         .pipe(gulp.dest('build/'));
 });
 
