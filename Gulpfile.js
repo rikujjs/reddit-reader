@@ -12,7 +12,7 @@ gulp.task('scripts', function () {
     gulp.src(['app/js/app.jsx'])
         .pipe(browserify({
             debug: true,
-            transform: [ 'reactify' ]
+            transform: [ 'babelify' ]
         }))
         .pipe(gulp.dest('build/'));
 });
