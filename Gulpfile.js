@@ -9,7 +9,7 @@ gulp.task('styles', function () {
 });
 
 gulp.task('scripts', function () {
-    gulp.src(['app/js/app.js'])
+    gulp.src(['app/js/app.jsx'])
         .pipe(browserify({
             debug: true,
             transform: [ 'reactify' ]
@@ -19,7 +19,7 @@ gulp.task('scripts', function () {
 
 gulp.task('dev', function () {
     gulp.run('build');
-    gulp.watch('app/js/**/*.js', [ 'scripts' ]);
+    gulp.watch('app/js/**/*.jsx', [ 'scripts' ]);
     gulp.watch('app/css/**/*.css', [ 'styles' ]);
 });
 
