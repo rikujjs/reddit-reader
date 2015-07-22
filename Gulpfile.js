@@ -22,6 +22,7 @@ gulp.task('scripts', function () {
 gulp.task('dev', function () {
     gulp.run('build');
     gulp.watch('app/js/**/*.jsx', [ 'scripts' ]);
+    gulp.watch('app/js/**/*.js', [ 'scripts' ]);
     gulp.watch('app/css/**/*.css', [ 'styles' ]);
 });
 
