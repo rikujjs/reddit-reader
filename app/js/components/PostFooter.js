@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-class Footer extends React.Component {
+class PostFooter extends React.Component {
   render() {
     return (
       <small>{this.props.post.author}</small>
@@ -10,4 +10,4 @@ class Footer extends React.Component {
   }
 };
 
-export default Footer;
+export default PostFooter;

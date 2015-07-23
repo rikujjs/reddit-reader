@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Header from './header';
-import List from './posts/list';
+import PostList from './components/PostList';
 
 import PostStore from './store.js';
 import Reflux from 'reflux';
@@ -15,7 +15,7 @@ let App = React.createClass({
       <div>
         <Header/>
         <div className="container content">
-          <List posts={this.state.list}/>
+          <PostList posts={this.state.list}/>
         </div>
       </div>
     )

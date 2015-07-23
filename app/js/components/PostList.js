@@ -1,9 +1,9 @@
 'use strict';
 import React from 'react';
 import Actions from '../actions.js';
-import Item from './item';
+import PostItem from './PostItem';
 
-class List extends React.Component {
+class PostList extends React.Component {
   componentDidMount() {
     Actions.load();
   }
@@ -11,11 +11,11 @@ class List extends React.Component {
     return (
       <ol className="posts">
         {this.props.posts.map(function (post) {
-            return <Item key={post.data.id} post={post.data}/>
+            return <PostItem key={post.data.id} post={post.data}/>
         })}
       </ol>
     )
   }
 };
 
-export default List;
+export default PostList;

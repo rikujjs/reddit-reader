@@ -1,19 +1,19 @@
 'use strict';
 
 import React from 'react';
-import Footer from './footer';
+import PostFooter from './PostFooter';
 
-class Item extends React.Component{
+class PostItem extends React.Component{
   render() {
     var post = this.props.post;
     return (
       <li className="postContainer">
         <h4>{post.title}</h4>
         <p>{post.selftext}</p>
-        <Footer post={post}/>
+        <PostFooter post={post}/>
       </li>
     )
   }
 };
 
-export default Item;
+export default PostItem;
