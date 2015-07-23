@@ -1,25 +1,24 @@
 'use strict';
 
 import React from 'react';
-import Header from './components/Header';
-import PostList from './components/PostList';
+import Reflux from 'reflux';
+import Router from 'react-router-component';
+let { NotFound, Locations, Location } = Router;
+
+import PostListing from './views/PostListing';
+import NotFoundPage from './views/NotFound';
 
 import PostStore from './stores/PostStore';
-import Reflux from 'reflux';
 
-let App = React.createClass({
-  mixins: [Reflux.connect(PostStore, "list")],
-
+class App extends React.Component {
   render() {
     return (
-      <div>
-        <Header/>
-        <div className="container content">
-          <PostList posts={this.state.list}/>
-        </div>
-      </div>
+      <Locations hash>
+        <NotFound handler={NotFoundPage}/>
+        <Location path='/' handler={PostListing}/>
+      </Locations>
     )
   }
-});
+};
 
 React.render(<App/>, document.getElementById('app'));
