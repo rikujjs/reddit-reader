@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Header from './header';
-import Posts from './posts';
+import List from './posts/list';
 
 let App = React.createClass({
   render() {
@@ -10,7 +10,7 @@ let App = React.createClass({
       <div>
         <Header/>
         <div className="container content">
-          <Posts/>
+          <List posts={this.state.postList}/>
         </div>
       </div>
     )
