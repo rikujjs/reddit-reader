@@ -1,7 +1,6 @@
 'use strict';
 
 import React from 'react';
-import PostFooter from './PostFooter';
 
 class PostItem extends React.Component{
   render() {
@@ -10,7 +9,7 @@ class PostItem extends React.Component{
       <li className="postContainer">
         <h4>{post.title}</h4>
         <p>{post.selftext}</p>
-        <PostFooter post={post}/>
+        <small>{post.author}</small>
       </li>
     )
   }
