@@ -4,7 +4,7 @@ import React from 'react';
 
 class PostItem extends React.Component{
   render() {
-    var post = this.props.post;
+    let post = this.props.post;
     return (
       <li className="postContainer">
         <h4>{post.title}</h4>
