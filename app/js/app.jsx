@@ -1,10 +1,10 @@
 'use strict';
 
 import React from 'react';
-import Header from './header';
+import Header from './components/Header';
 import PostList from './components/PostList';
 
-import PostStore from './store.js';
+import PostStore from './stores/PostStore';
 import Reflux from 'reflux';
 
 let App = React.createClass({

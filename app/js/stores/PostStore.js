@@ -1,7 +1,7 @@
 'use strict';
 
 import Reflux from 'reflux';
-import Actions from './actions.js';
+import Actions from '../actions/Actions.js';
 import request from 'superagent';
 
 const url = 'http://www.reddit.com/r/reactjs/new.json?sort=hot';

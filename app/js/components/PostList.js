@@ -1,6 +1,6 @@
 'use strict';
 import React from 'react';
-import Actions from '../actions.js';
+import Actions from '../actions/Actions';
 import PostItem from './PostItem';
 
 class PostList extends React.Component {
