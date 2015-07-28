@@ -5,7 +5,7 @@ import PostItem from './PostItem';
 
 class PostList extends React.Component {
   componentDidMount() {
-    Actions.load();
+    Actions.loadListing();
   }
   render() {
     return (

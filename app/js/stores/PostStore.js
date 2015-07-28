@@ -4,23 +4,34 @@ import Reflux from 'reflux';
 import Actions from '../actions/Actions.js';
 import request from 'superagent';
 
-const url = 'http://www.reddit.com/r/reactjs/new.json?sort=hot';
+const listUrl = 'http://www.reddit.com/r/reactjs/new.json?sort=hot';
+const postUrl = 'http://www.reddit.com/r/reactjs/';
 
 const PostStore = Reflux.createStore({
   listenables: [Actions],
+
   init() {
-    this.listenTo(Actions.load, this.fetchData);
+    this.list = [];
   },
   getInitialState() {
-    this.list = [];
     return this.list;
   },
-  fetchData() {
+
+  //Reflux automatically maps actions with on -prefix
+  onLoadListing() {
     request
-      .get(url)
+      .get(listUrl)
       .end((err, res) => {
         this.list = res.body.data.children;
         this.trigger(this.list);
+      });
+  },
+  onLoadPost(id) {
+    request
+      .get(postUrl + id + '.json')
+      .end((err, res) => {
+        console.log('loaded post:', id);
+        console.log(res.body);
       });
   }
 });
