@@ -7,6 +7,7 @@ let { NotFound, Locations, Location } = Router;
 
 import PostListing from './views/PostListing';
 import NotFoundPage from './views/NotFound';
+import PostInfo from './views/PostInfo';
 
 import PostStore from './stores/PostStore';
 
@@ -16,6 +17,7 @@ class App extends React.Component {
       <Locations hash>
         <NotFound handler={NotFoundPage}/>
         <Location path='/' handler={PostListing}/>
+        <Location path='/posts/:id' handler={PostInfo}/>
       </Locations>
     )
   }
