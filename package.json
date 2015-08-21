@@ -16,7 +16,7 @@
     "superagent": "^1.2.0"
   },
   "dependencies": {
-    "jquery": "^2.1.4",
+    "lodash": "^3.10.1",
     "react-async": "^2.1.0",
     "react-router-component": "^0.26.0"
   }
